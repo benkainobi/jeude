@@ -38,15 +38,37 @@ body {
     font-size: larger;
 }
 
-.global {
+.current {
     height: 10vh;
     width: 10vw;
     text-align: center;
     line-height: 10vh;
-    background-color: red;
+    border-radius: 5px;
 }
 
-.resultat {
+.un {
+    background-color: white;
+}
+
+.deux {
+    background-color: grey;
+}
+
+.rejouer {
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    height: 10vh;
+    width: 10vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+.de {
     background-color: black;
     color: white;
     height: 10vh;
@@ -55,4 +77,57 @@ body {
     top: 30vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 10vh;
+}
+
+.lancer {
+    position: absolute;
+    bottom: 30vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    height: 5vh;
+    width: 10vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+.tenir {
+    position: absolute;
+    bottom: 20vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    height: 5vh;
+    width: 10vh;
+    text-align: center;
+    line-height: 5vh;
+}
+
+.total {
+    font-family: Lato;
+    font-size: 30px;
+    color: black;
+}
+
+.lumiere {
+    height: 1vh;
+    width: 1vh;
+    border-radius: 50%;
+    background-color: red;
+    display: block;
+}
+
+.entete1 {
+    display: flex;
+}
+
+.entete2 {
+    display: flex;
 }
