@@ -1,115 +1,115 @@
-function lancer() {
-    let nombre = Math.round(Math.random() * 5 + 1);
-    let resultat = document.querySelector('.de');
-    let currentJoueur1 = document.querySelector('.un');
-    let currentJoueur2 = document.querySelector('.deux');
-    let signal1 = document.querySelector('.signal1');
-    let signal2 = document.querySelector('.signal2');
+function hasard() {
+    let de = document.querySelector('.de');
+    let current1 = document.querySelector('.un');
+    let current2 = document.querySelector('.deux');
+    let currentActif = document.querySelector('.current.actif2');
 
-
-    if (nombre == 1) {
-        signal1.classList.toggle('lumiere');
-        signal2.classList.toggle('lumiere');
-        currentJoueur1.classList.toggle('actif');
-        currentJoueur2.classList.toggle('actif');
-        currentJoueur1.classList.toggle('inactif');
-        currentJoueur2.classList.toggle('inactif');
-        let actif = document.querySelector('.actif');
-        let inactif = document.querySelector('.inactif');
-
-
-        resultat.innerHTML = 1;
-
-
-    } else {
-
-        resultat.innerHTML = nombre;
-        let c = document.querySelector('.actif');
-
-        if (c.innerHTML == "") { c.innerHTML = 0; }
-        c.innerHTML = parseInt(c.innerHTML) + parseInt(resultat.innerHTML);
+    let n = Math.round(Math.random() * 5 + 1);
+    if (n == 1) {
+        de.className = 'de ein';
+        current1.innerHTML = 0;
+        current2.innerHTML = 0;
+        signal1.classList.toggle('actif');
+        signal2.classList.toggle('actif');
+        current1.classList.toggle('actif2');
+        current2.classList.toggle('actif2');
+        total1.classList.toggle('actif2');
+        total2.classList.toggle('actif2');
     }
 
-
-
+    if (n == 2) {
+        de.className = 'de zwei';
+        currentActif.innerHTML = parseInt(currentActif.innerHTML) + 2;
+    }
+    if (n == 3) {
+        de.cclassName = 'de drei';
+        currentActif.innerHTML = parseInt(currentActif.innerHTML) + 3;
+    }
+    if (n == 4) {
+        de.className = 'de vier';
+        currentActif.innerHTML = parseInt(currentActif.innerHTML) + 4;
+    }
+    if (n == 5) {
+        de.className = 'de funf';
+        currentActif.innerHTML = parseInt(currentActif.innerHTML) + 5;
+    }
+    if (n == 6) {
+        de.className = 'de sechs';
+        currentActif.innerHTML = parseInt(currentActif.innerHTML) + 6;
+    }
 }
 
 function tenir() {
-    let currentJoueur1 = document.querySelector('.un');
-    let currentJoueur2 = document.querySelector('.deux');
+    let currentActif = document.querySelector('.current.actif2');
+    let totalActif = document.querySelector('.total.actif2');
 
-    signal1.classList.toggle('lumiere');
-    signal2.classList.toggle('lumiere');
 
-    let totalJoueur1 = document.querySelector('.one');
-    let totalJoueur2 = document.querySelector('.two');
-    if (currentJoueur1.className != 0) {
-        totalJoueur1.innerHTML = parseInt(totalJoueur1.innerHTML) + parseInt(currentJoueur1.innerHTML);
 
-    }
-    if (totalJoueur1.innerHTML >= 100) {
+    total1.classList.toggle('actif2');
+    total2.classList.toggle('actif2');
+
+
+    totalActif.innerHTML = parseInt(totalActif.innerHTML) + parseInt(currentActif.innerHTML);
+    current1.classList.toggle('actif2');
+    current2.classList.toggle('actif2');
+    signal1.classList.toggle('actif');
+    signal2.classList.toggle('actif');
+
+    if (total1.innerHTML >= 100) {
         alert('Joueur 1 gagne!');
-        currentJoueur1.innerHTML = 0;
-        currentJoueur2.innerHTML = 0;
-        totalJoueur1.innerHTML = 0;
-        totalJoueur2.innerHTML = 0;
+        rejouer()
     }
-    if (currentJoueur2.innerHTML != 0) {
-        totalJoueur2.innerHTML = parseInt(totalJoueur2.innerHTML) + parseInt(currentJoueur2.innerHTML);
-
-    }
-    if (totalJoueur2.innerHTML >= 100) {
+    if (total2.innerHTML >= 100) {
         alert('Joueur 2 gagne!');
-        currentJoueur1.innerHTML = 0;
-        currentJoueur2.innerHTML = 0;
-        totalJoueur1.innerHTML = 0;
-        totalJoueur2.innerHTML = 0;
+        rejouer()
     }
-    currentJoueur1.classList.toggle('actif');
-    currentJoueur2.classList.toggle('actif');
-    currentJoueur1.classList.toggle('inactif');
-    currentJoueur2.classList.toggle('inactif');
-    currentJoueur1.innerHTML = 0;
-    currentJoueur2.innerHTML = 0;
+
+
+
+    current1.innerHTML = 0;
+    current2.innerHTML = 0;
 }
 
 function rejouer() {
-    let currentJoueur1 = document.querySelector('.un');
-    let currentJoueur2 = document.querySelector('.deux');
-
-    let totalJoueur1 = document.querySelector('.one');
-    let totalJoueur2 = document.querySelector('.two');
-    currentJoueur1.innerHTML = 0;
-    currentJoueur2.innerHTML = 0;
-    totalJoueur1.innerHTML = 0;
-    totalJoueur2.innerHTML = 0;
+    total1.innerHTML = 0;
+    total2.innerHTML = 0;
+    current1.innerHTML = 0;
+    current2.innerHTML = 0;
 }
 
 let toucheLancer = document.querySelector('.lancer');
-toucheLancer.addEventListener('click', lancer);
+toucheLancer.addEventListener('click', hasard);
 
 
-let toucheTenir = document.querySelector('.tenir');
-toucheTenir.addEventListener('click', tenir);
 
-let current1 = document.querySelector('.un');
-let current2 = document.querySelector('.deux');
-
-current1.classList.add('actif');
-current2.classList.add('inactif');
-
-let totalJoueur1 = document.querySelector('.one');
-let totalJoueur2 = document.querySelector('.two');
-
-let toucheRejouer = document.querySelector('.rejouer');
-toucheRejouer.addEventListener('click', rejouer);
 
 
 let signal1 = document.querySelector('.signal1');
 let signal2 = document.querySelector('.signal2');
+signal1.classList.add('actif');
 
-signal1.className = 'lumiere';
+let current1 = document.querySelector('.un');
+current1.innerHTML = 0;
 
+let current2 = document.querySelector('.deux');
+current2.innerHTML = 0;
 
-totalJoueur1.innerHTML = 0;
-totalJoueur2.innerHTML = 0;
+current1.classList.add('actif2');
+let currentActif = document.querySelector('.current.actif2');
+
+let boutonTenir = document.querySelector('.tenir');
+boutonTenir.addEventListener('click', tenir);
+
+let total = document.querySelectorAll('.total');
+total.innerHTML = 0;
+
+let total1 = document.querySelector('.total.one');
+let total2 = document.querySelector('.total.two');
+
+total1.innerHTML = 0;
+total2.innerHTML = 0;
+
+total1.classList.toggle('actif2');
+
+let toucheRejouer = document.querySelector('.rejouer');
+toucheRejouer.addEventListener('click', rejouer);
