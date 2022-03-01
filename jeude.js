@@ -1,9 +1,4 @@
 function hasard() {
-    let de = document.querySelector('.de');
-    let current1 = document.querySelector('.un');
-    let current2 = document.querySelector('.deux');
-    let currentActif = document.querySelector('.current.actif2');
-
     let n = Math.round(Math.random() * 5 + 1);
     if (n == 1) {
         de.className = 'de ein';
@@ -15,6 +10,9 @@ function hasard() {
         current2.classList.toggle('actif2');
         total1.classList.toggle('actif2');
         total2.classList.toggle('actif2');
+        /*changement effectif de current et total*/
+        currentActif = document.querySelector('.current.actif2');
+        totalActif = document.querySelector('.total.actif2');
     }
 
     if (n == 2) {
@@ -22,7 +20,7 @@ function hasard() {
         currentActif.innerHTML = parseInt(currentActif.innerHTML) + 2;
     }
     if (n == 3) {
-        de.cclassName = 'de drei';
+        de.className = 'de drei';
         currentActif.innerHTML = parseInt(currentActif.innerHTML) + 3;
     }
     if (n == 4) {
@@ -40,34 +38,39 @@ function hasard() {
 }
 
 function tenir() {
-    let currentActif = document.querySelector('.current.actif2');
-    let totalActif = document.querySelector('.total.actif2');
+    /*addition du current actif avec le total déja tenu actif*/
+    totalActif.innerHTML = parseInt(totalActif.innerHTML) + parseInt(currentActif.innerHTML);
+
+
+    if (total1.innerHTML >= 100) {
+        alert('Joueur 1 gagne!');
+        rejouer();
+    }
+    if (total2.innerHTML >= 100) {
+        alert('Joueur 2 gagne!');
+        rejouer();
+    }
+
+    /* total1.classList.toggle('actif2');
+     total2.classList.toggle('actif2');*/
+    /*Remise à zéro du compteur de la série active*/
+    currentActif.innerHTML = 0;
+
+    /*échange de l'activité des compteurs et indicateur*/
+    signal1.classList.toggle('actif');
+    signal2.classList.toggle('actif');
+
+    current1.classList.toggle('actif2');
+    current2.classList.toggle('actif2');
 
 
 
     total1.classList.toggle('actif2');
     total2.classList.toggle('actif2');
 
-
-    totalActif.innerHTML = parseInt(totalActif.innerHTML) + parseInt(currentActif.innerHTML);
-    current1.classList.toggle('actif2');
-    current2.classList.toggle('actif2');
-    signal1.classList.toggle('actif');
-    signal2.classList.toggle('actif');
-
-    if (total1.innerHTML >= 100) {
-        alert('Joueur 1 gagne!');
-        rejouer()
-    }
-    if (total2.innerHTML >= 100) {
-        alert('Joueur 2 gagne!');
-        rejouer()
-    }
-
-
-
-    current1.innerHTML = 0;
-    current2.innerHTML = 0;
+    /*changement effectif de current et total*/
+    currentActif = document.querySelector('.current.actif2');
+    totalActif = document.querySelector('.total.actif2');
 }
 
 function rejouer() {
@@ -75,41 +78,59 @@ function rejouer() {
     total2.innerHTML = 0;
     current1.innerHTML = 0;
     current2.innerHTML = 0;
+    signal1.classList.add('actif');
+    signal2.classList.remove('actif');
 }
+
+
+/*bouton d'action*/
+let toucheRejouer = document.querySelector('.rejouer');
+toucheRejouer.addEventListener('click', rejouer);
+
 
 let toucheLancer = document.querySelector('.lancer');
 toucheLancer.addEventListener('click', hasard);
 
 
-
-
-
-let signal1 = document.querySelector('.signal1');
-let signal2 = document.querySelector('.signal2');
-signal1.classList.add('actif');
-
-let current1 = document.querySelector('.un');
-current1.innerHTML = 0;
-
-let current2 = document.querySelector('.deux');
-current2.innerHTML = 0;
-
-current1.classList.add('actif2');
-let currentActif = document.querySelector('.current.actif2');
-
 let boutonTenir = document.querySelector('.tenir');
 boutonTenir.addEventListener('click', tenir);
 
-let total = document.querySelectorAll('.total');
-total.innerHTML = 0;
 
-let total1 = document.querySelector('.total.one');
-let total2 = document.querySelector('.total.two');
+/*Déclaration et initialisation de l'indicateur de joueur actif*/
+let signal1 = document.querySelector('.signal1');
+let signal2 = document.querySelector('.signal2');
+signal1.classList.add('actif');
+/* actif est une classe qui définit le point rouge du joueur actif*/
+
+
+/*Déclaration et initialisation des compteurs*/
+/* compteur du nombre de point d'une série de jet de dé*/
+/*let current = document.querySelectorAll('.current');*/
+
+let current1 = document.querySelector('.un');
+let current2 = document.querySelector('.deux');
+
+current1.innerHTML = 0;
+current2.innerHTML = 0;
+
+current1.classList.toggle('actif2');
+let currentActif = document.querySelector('.current.actif2');
+
+
+/*compteur de la somme des séries tenues*/
+
+/*let total = document.querySelectorAll('.total');*/
+
+let total1 = document.querySelector('.one');
+let total2 = document.querySelector('.two');
 
 total1.innerHTML = 0;
 total2.innerHTML = 0;
 
 total1.classList.toggle('actif2');
 
-let toucheRejouer = document.querySelector('.rejouer');
-toucheRejouer.addEventListener('click', rejouer);
+
+let totalActif = document.querySelector('.total.actif2');
+
+/* Déclaration du dé*/
+let de = document.querySelector('.de');

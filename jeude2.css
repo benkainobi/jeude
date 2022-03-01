@@ -144,7 +144,7 @@ body {
 }
 
 .drei {
-    background-image: url('/Jeude/face/drei.png');
+    background-image: url('../Jeude/face/drei.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
