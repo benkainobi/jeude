@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <?php
+    ?>
     <div class="rejouer">Nouvelle partie</div>
     <div class="de"></div>
     <div class="lancer">&#8634 Lancer</div>
