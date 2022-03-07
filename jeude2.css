@@ -119,7 +119,7 @@ body {
 }
 
 .ein {
-    background-image: url('../Jeude/face/ein.png');
+    background-image: asset_url('../Jeude/face/ein.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,7 +129,7 @@ body {
 }
 
 .zwei {
-    background-image: url('../Jeude/face/zwei.png');
+    background-image: asset_url('../Jeude/face/zwei.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ body {
 }
 
 .drei {
-    background-image: url('../Jeude/face/drei.png');
+    background-image: asset_url('../Jeude/face/drei.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ body {
 }
 
 .vier {
-    background-image: url('../Jeude/face/vier.png');
+    background-image: asset_url('../Jeude/face/vier.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@ body {
 }
 
 .funf {
-    background-image: url('../Jeude/face/funf.png');
+    background-image: asset_url('../Jeude/face/funf.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,7 +169,7 @@ body {
 }
 
 .sechs {
-    background-image: url('../Jeude/face/sechs.png');
+    background-image: asset_url('../Jeude/face/sechs.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
