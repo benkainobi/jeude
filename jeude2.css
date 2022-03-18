@@ -119,7 +119,7 @@ body {
 }
 
 .ein {
-    background: asset_url('../Jeude/face/ein.png', image);
+    background: url(https://benkainobijeu.herokuapp.com/face/ein.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,7 +129,7 @@ body {
 }
 
 .zwei {
-    background: asset_url('../Jeude/face/zwei.png', image);
+    background: url(https://benkainobijeu.herokuapp.com/face/zwei.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ body {
 }
 
 .drei {
-    background: asset_url('../Jeude/face/drei.png', image);
+    background: url(https://benkainobijeu.herokuapp.com/face/drei.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ body {
 }
 
 .vier {
-    background: asset_url('../Jeude/face/vier.png', image);
+    background: url(https://benkainobijeu.herokuapp.com/face/vier.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@ body {
 }
 
 .funf {
-    background: asset_url('../Jeude/face/funf.png', image);
+    background: url(https://benkainobijeu.herokuapp.com/face/funf.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,7 +169,7 @@ body {
 }
 
 .sechs {
-    background: asset_url('../Jeude/face/sechs.png', image);
+    background: url(https://benkainobijeu.herokuapp.com/face/sechs.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
