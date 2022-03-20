@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+.cadre {
+    height: 100vh;
+    width: 100vw;
+    background-color: grey;
+    border: 10px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.joueur1 {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.joueur2 {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.joueur {
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+}
+
+.current {
+    height: 10vh;
+    width: 10vw;
+    text-align: center;
+    line-height: 10vh;
+    border-radius: 5px;
+}
+
+.un {
+    background-color: white;
+}
+
+.deux {
+    background-color: grey;
+}
+
+.rejouer {
+    position: absolute;
+    top: 50vh;
+    left: 10vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    height: 10vh;
+    width: 10vw;
+    text-align: center;
+    line-height: 10vh;
+}
+
+.de {
+    background-color: red;
+    color: white;
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.lancer {
+    position: absolute;
+    top: 50vh;
+    left: 90vw;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    height: 5vh;
+    width: 10vw;
+    text-align: center;
+    line-height: 5vh;
+    transform: translate(-50%, -50%);
+}
+
+.tenir {
+    position: absolute;
+    top: 50vh;
+    left: 70vw;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    height: 5vh;
+    width: 10vw;
+    text-align: center;
+    line-height: 5vh;
+    transform: translate(-50%, -50%);
+}
+
+.total {
+    font-family: Lato;
+    font-size: 30px;
+    color: black;
+}
+
+.entete {
+    display: flex;
+}
+
+.ein {
+    background: url(https://benkainobijeu.herokuapp.com/face/ein.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 5px;
+}
+
+.zwei {
+    background: url(https://benkainobijeu.herokuapp.com/face/zwei.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 5px;
+}
+
+.drei {
+    background: url(https://benkainobijeu.herokuapp.com/face/drei.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 5px;
+}
+
+.vier {
+    background: url(https://benkainobijeu.herokuapp.com/face/vier.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 5px;
+}
+
+.funf {
+    background: url(https://benkainobijeu.herokuapp.com/face/funf.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 5px;
+}
+
+.sechs {
+    background: url(https://benkainobijeu.herokuapp.com/face/sechs.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 5px;
+}
+
+
+/*indicateur joueur actif*/
+
+.actif {
+    height: 1vh;
+    width: 1vh;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.encadre {
+    display: flex;
+    height: 3vh;
+    align-items: center;
+}
